@@ -1,0 +1,64 @@
+<html>
+    <!-- title -->
+    <center> 
+        <h1>
+            <p style="font-family: cursive;font-size: 100px;color:antiquewhite;"> 
+                Hello! 
+            </h1>
+    </center>
+
+    <body style="background-color:cadetblue;">
+
+            <center>
+                <p id="delayed-text" style="display:none;font-family: cursive;color: antiquewhite;font-size: 50px;transform: translateY(100px);">
+                happy birthday!
+                </p>
+            </center>
+
+            <!-- empty gif (space for box gif) -->
+            <img id="box" src="" width="500" height="500" style="display:none;transform: translate(200px,-100px);">
+     
+       <script>
+            // initializing variables for appearing/disappearing gifs
+            const b="box";
+            const e="block"
+            const c="";
+            const d="squid";
+            const f="none";
+        </script> 
+
+        <!-- making the button that opens the gift box -->
+        <button type="button" onclick="startGif(c,d,f,0);startGif(c,b,e,1);showWords()" style="border: none;padding: 0;background: none;">
+            <!-- making the button be the squid gif -->
+            <img 
+                id="squid" 
+                src="https://64.media.tumblr.com/c2eaf38ad512bae8bf81dea0ddba32c4/tumblr_inline_pjztabVGAb1qi734a_400.gif" alt="Button Image" width="500" height="500" style="transform: translate(225px,50px);">
+            </button>
+       
+
+        <center><h2><p id="pre" style="font-family:cursive; font-size: 50px;color:antiquewhite;transform: translateY(5px);" >Presiona!</p></h2></center>
+        <script>
+            //function that makes the gif start/stop playing
+            function startGif(a,b,e,h){ 
+                const gif=document.getElementById(b);
+                if(h==1){gif.src="https://media.tenor.com/GMDGErB9z_QAAAAi/jorrbox-jorrparivar.gif";}
+                else{gif.src=a;}
+                gif.style.display=e;
+            }
+            //function that makes the word "happy birthday" appear after button press
+            function showWords() {
+                document.getElementById("pre").style.display ="none";
+                setTimeout(function() {
+                    document.getElementById("delayed-text").style.display = "block";
+                    
+                }, 1000); // 2500 milliseconds = 2.5 seconds
+    }
+
+
+
+        </script>
+        
+    </body>  
+ </html>
+
+ 
